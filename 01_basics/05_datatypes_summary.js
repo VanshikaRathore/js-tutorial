@@ -23,3 +23,26 @@ var boolean = true;
       console.log("hello");
   }
   console.log(typeof myFunction);
+
+
+  /* ==================================================================*/
+  //stack (primitive), heap (nn-primitive)
+      
+//   myName = "vanshika"
+//  let anotherName = myName
+//  anotherName = 'vanshi'
+//  console.log(myName);
+//  console.log(anotherName);  // all values store in stack.
+
+ myObj={
+    name:'vanshika',
+    age:22,         // myObj make memory in stack buttake refrence from memory
+    city:'indore'
+ }
+ console.log(myObj)
+  let userTwo = myObj;
+  userTwo.city = 'Barwani'    
+  console.log(myObj.city);
+  console.log(userTwo.city);
+
+
