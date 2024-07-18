@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+    // ********************Set TimeOut*********************
+    // setTimeout(function(){
+    //     console.log("vanshi")
+    // },2000);  // Do work only for one time
+  
+//     const sayVanshi = function(){
+//         console.log("Vanshika");
+//     }
+//     // setTimeout(sayVanshi,2000)
+//    const changeText = function(){
+//         document.querySelector('h1').innerHTML = "Best JS Series"
+//    }
+//     const changeMe = setTimeout(changeText,2000)
+   
+//    // this will change the text after 2 sec and to stop it we used
+
+//    document.querySelector('#stop').addEventListener('click',function(){
+//     clearTimeout(changeMe)
+//     console.log("stopped")
+ //  })
+
+ // *********************SET INTERVAL ***********************
+//  const sayDate = function(){
+//     console.log("vanshi",Date.now());
+//  }
+//  setInterval(sayDate,2000);
+
+// we can also pass parameter
+// const sayDate = function(str){
+//     console.log(str,Date.now());
+//  }
+
+
+let timerId;
+ document.querySelector('#start').addEventListener('click',function(){
+      timerId = setInterval(function(str){
+        console.log(str,Date.now(),'hi');
+        console.log('start')
+      },1000);
+ });
+ //const intervalId = setInterval(sayDate,1000,"h1");
+ document.querySelector('#stop').addEventListener('click',function(){
+    clearInterval(timerId)
+    console.log('stopped')
+ });
+
+ 
+</script>
+</html>
